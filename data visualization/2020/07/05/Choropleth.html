@@ -4,18 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Ian Dias Portfolio | Datascience portfolio by Ian Dias</title>
+<title>Visualization of current COVID cases in NSW and VIC | Ian Dias Portfolio</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Ian Dias Portfolio" />
+<meta property="og:title" content="Visualization of current COVID cases in NSW and VIC" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Datascience portfolio by Ian Dias" />
-<meta property="og:description" content="Datascience portfolio by Ian Dias" />
-<link rel="canonical" href="https://ianldias.github.io/Portfolio/" />
-<meta property="og:url" content="https://ianldias.github.io/Portfolio/" />
+<meta name="description" content="Last updated 15/11/2020" />
+<meta property="og:description" content="Last updated 15/11/2020" />
+<link rel="canonical" href="https://ianldias.github.io/Portfolio/data%20visualization/2020/07/05/Choropleth.html" />
+<meta property="og:url" content="https://ianldias.github.io/Portfolio/data%20visualization/2020/07/05/Choropleth.html" />
 <meta property="og:site_name" content="Ian Dias Portfolio" />
-<meta property="og:image" content="https://ianldias.github.io/Portfolio/images/logo.png" />
+<meta property="og:image" content="https://ianldias.github.io/Portfolio/images/some_folder/your_image.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-05T00:00:00-05:00" />
 <script type="application/ld+json">
-{"url":"https://ianldias.github.io/Portfolio/","@type":"WebSite","headline":"Ian Dias Portfolio","image":"https://ianldias.github.io/Portfolio/images/logo.png","name":"Ian Dias Portfolio","description":"Datascience portfolio by Ian Dias","@context":"https://schema.org"}</script>
+{"url":"https://ianldias.github.io/Portfolio/data%20visualization/2020/07/05/Choropleth.html","@type":"BlogPosting","headline":"Visualization of current COVID cases in NSW and VIC","dateModified":"2020-07-05T00:00:00-05:00","datePublished":"2020-07-05T00:00:00-05:00","image":"https://ianldias.github.io/Portfolio/images/some_folder/your_image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://ianldias.github.io/Portfolio/data%20visualization/2020/07/05/Choropleth.html"},"description":"Last updated 15/11/2020","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ianldias.github.io/Portfolio/feed.xml" title="Ian Dias Portfolio" /><link rel="shortcut icon" type="image/x-icon" href="/Portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -83,52 +85,85 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>This portfolio is a compilation of notebooks which I’ve created exploring data science and machine learning algorithms.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<h1 id="posts">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Visualization of current COVID cases in NSW and VIC</h1><p class="page-description">Last updated 15/11/2020</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-07-05T00:00:00-05:00" itemprop="datePublished">
+        Jul 5, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Portfolio/categories/#Data Visualization">Data Visualization</a>
+        
+      
+      </p>
+    
 
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
 
-
-  
-
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
-
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
-
- 
-  
-
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/Portfolio/timeseries/forecasting/2020/11/15/Forecasting.html">
-    Forecasting retail turnover of household goods in the Australian economy
+    <a href="https://github.com/IanLDias/Portfolio/tree/master/_notebooks/2020-07-05-Choropleth.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/Portfolio/assets/badges/github.svg" alt="View On GitHub">
     </a>
-</h3><p class="post-meta-description">Data taken from the ABS website is forecasted 4 periods into the future by different models</p><p class="post-meta">Nov 15, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/Portfolio/linear%20programming/economic%20problems/2020/11/14/LinearProgramming.html">
-    Linear Programming in Economics
-    </a>
-</h3><p class="post-meta-description">An example of how linear programming is used to solve economic constrained maximization problems</p><p class="post-meta">Nov 14, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/Portfolio/data%20visualization/2020/07/05/Choropleth.html">
-    Visualization of current COVID cases in NSW and VIC
-    </a>
-</h3><p class="post-meta-description">Last updated 15/11/2020</p><p class="post-meta">Jul 5, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/Portfolio/pandas/regression/2020/06/08/CaseStudy.html">
-    Case Study Replication using Pandas
-    </a>
-</h3><p class="post-meta-description">The Dynamics of Satisfaction with Working Hours in Australia</p><p class="post-meta">Jun 8, 2020</p>
-</li></ul>
+</div>
 
-    </div>
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/IanLDias/Portfolio/master?filepath=_notebooks%2F2020-07-05-Choropleth.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Portfolio/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/IanLDias/Portfolio/blob/master/_notebooks/2020-07-05-Choropleth.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/Portfolio/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-07-05-Choropleth.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Available under: <a href="https://github.com/IanLDias/Corona_Map">https://github.com/IanLDias/Corona_Map</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="IanLDias/Portfolio"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Portfolio/data%20visualization/2020/07/05/Choropleth.html" hidden></a>
+</article>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/Portfolio/"></data>

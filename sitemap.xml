@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://ianldias.github.io/Portfolio/pandas/regression/2020/06/08/CaseStudy.html</loc>
+<lastmod>2020-06-08T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://ianldias.github.io/Portfolio/2020/06/08/Report.html</loc>
+<lastmod>2020-06-08T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://ianldias.github.io/Portfolio/linear%20programming/economic%20problems/2020/11/14/LinearProgramming.html</loc>
 <lastmod>2020-11-14T00:00:00-06:00</lastmod>
 </url>

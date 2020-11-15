@@ -21,6 +21,22 @@
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ianldias.github.io/Portfolio/feed.xml" title="Ian Dias Portfolio" /><link rel="shortcut icon" type="image/x-icon" href="/Portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
 
 <script>
 function wrap_img(fn) {
@@ -121,23 +137,8 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#Ian-Dias">Ian Dias </a></li>
-<li class="toc-entry toc-h2"><a href="#Nov-2020">Nov 2020 </a></li>
-<li class="toc-entry toc-h2"><a href="#Contents">Contents </a>
+<li class="toc-entry toc-h2"><a href="#Nov-2020">Nov 2020 </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#1.-Visualization-of-the-Time-Series">1. Visualization of the Time-Series </a></li>
-<li class="toc-entry toc-h3"><a href="#2.-Stationarity-Checks">2. Stationarity Checks </a></li>
-<li class="toc-entry toc-h3"><a href="#3.-Predictors">3. Predictors </a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#3.1-Naive-Predictor">3.1 Naive Predictor </a></li>
-<li class="toc-entry toc-h4"><a href="#3.2-AR-Predictor">3.2 AR Predictor </a></li>
-<li class="toc-entry toc-h4"><a href="#3.3-Linear-Regression---Seasonality-Controls">3.3 Linear Regression - Seasonality Controls </a></li>
-<li class="toc-entry toc-h4"><a href="#3.4-Holt-Winters-Smoothing">3.4 Holt Winters Smoothing </a></li>
-<li class="toc-entry toc-h4"><a href="#3.5-Adding-external-variables">3.5 Adding external variables </a></li>
-<li class="toc-entry toc-h4"><a href="#3.6-Vector-AutoRegression">3.6 Vector AutoRegression </a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h3"><a href="#4.-Summary">4. Summary </a></li>
-<li class="toc-entry toc-h3"><a href="#5.-Predictions">5. Predictions </a></li>
 <li class="toc-entry toc-h3"><a href="#Introduction">Introduction </a></li>
 <li class="toc-entry toc-h3"><a href="#1.-Visualization-of-the-time-series">1. Visualization of the time-series </a></li>
 <li class="toc-entry toc-h3"><a href="#Visualizing-the-data-and-patterns">Visualizing the data and patterns </a></li>
@@ -182,48 +183,6 @@ window.onload = wrap_img;
 <h2 id="Nov-2020">
 <a class="anchor" href="#Nov-2020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nov 2020<a class="anchor-link" href="#Nov-2020"> </a>
 </h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Contents">
-<a class="anchor" href="#Contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contents<a class="anchor-link" href="#Contents"> </a>
-</h2>
-<h3 id="1.-Visualization-of-the-Time-Series">
-<a class="anchor" href="#1.-Visualization-of-the-Time-Series" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Visualization of the Time-Series<a class="anchor-link" href="#1.-Visualization-of-the-Time-Series"> </a>
-</h3>
-<h3 id="2.-Stationarity-Checks">
-<a class="anchor" href="#2.-Stationarity-Checks" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Stationarity Checks<a class="anchor-link" href="#2.-Stationarity-Checks"> </a>
-</h3>
-<h3 id="3.-Predictors">
-<a class="anchor" href="#3.-Predictors" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Predictors<a class="anchor-link" href="#3.-Predictors"> </a>
-</h3>
-<h4 id="3.1-Naive-Predictor">
-<a class="anchor" href="#3.1-Naive-Predictor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.1 Naive Predictor<a class="anchor-link" href="#3.1-Naive-Predictor"> </a>
-</h4>
-<h4 id="3.2-AR-Predictor">
-<a class="anchor" href="#3.2-AR-Predictor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.2 AR Predictor<a class="anchor-link" href="#3.2-AR-Predictor"> </a>
-</h4>
-<h4 id="3.3-Linear-Regression---Seasonality-Controls">
-<a class="anchor" href="#3.3-Linear-Regression---Seasonality-Controls" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.3 Linear Regression - Seasonality Controls<a class="anchor-link" href="#3.3-Linear-Regression---Seasonality-Controls"> </a>
-</h4>
-<h4 id="3.4-Holt-Winters-Smoothing">
-<a class="anchor" href="#3.4-Holt-Winters-Smoothing" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.4 Holt Winters Smoothing<a class="anchor-link" href="#3.4-Holt-Winters-Smoothing"> </a>
-</h4>
-<h4 id="3.5-Adding-external-variables">
-<a class="anchor" href="#3.5-Adding-external-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.5 Adding external variables<a class="anchor-link" href="#3.5-Adding-external-variables"> </a>
-</h4>
-<h4 id="3.6-Vector-AutoRegression">
-<a class="anchor" href="#3.6-Vector-AutoRegression" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.6 Vector AutoRegression<a class="anchor-link" href="#3.6-Vector-AutoRegression"> </a>
-</h4>
-<h3 id="4.-Summary">
-<a class="anchor" href="#4.-Summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Summary<a class="anchor-link" href="#4.-Summary"> </a>
-</h3>
-<h3 id="5.-Predictions">
-<a class="anchor" href="#5.-Predictions" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Predictions<a class="anchor-link" href="#5.-Predictions"> </a>
-</h3>
 </div>
 </div>
 </div>

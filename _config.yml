@@ -34,13 +34,11 @@ url: "https://IanLDias.github.io" # the base hostname & protocol for your site, 
 #
 # 3. You must replace the parameter `baseurl` in _action_files/settings.ini with the same value as you set here but WITHOUT QUOTES.
 #
-baseurl: "/Portfolio" # the subpath of your site, e.g. "/blog".
+baseurl: "/" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
   social_links:
-    twitter: fastdotai
-    github: fastai
 
 # Set this to true to get LaTeX math equation support
 use_math: True
@@ -95,6 +93,7 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
+
 # See https://jekyllrb.com/docs/pagination/
 # For pagination to work, you cannot have index.md at the root of your repo, instead you must rename this file to index.html
 paginate: 15
@@ -120,3 +119,6 @@ kramdown:
 feed:
   posts_limit: 5 #default posts_limit: 10
   excerpt_only: true
+
+exclude:
+  - settings.ini

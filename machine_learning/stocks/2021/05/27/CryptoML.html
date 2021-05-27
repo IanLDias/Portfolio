@@ -4,21 +4,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Title | Ian Dias Portfolio</title>
+<title>Random forests, SVMs and Linear Models in the cryptocurrency space | Ian Dias Portfolio</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Title" />
+<meta property="og:title" content="Random forests, SVMs and Linear Models in the cryptocurrency space" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Datascience portfolio by Ian Dias" />
-<meta property="og:description" content="Datascience portfolio by Ian Dias" />
-<link rel="canonical" href="https://ianldias.github.io/Portfolio/2021/05/27/CryptoML.html" />
-<meta property="og:url" content="https://ianldias.github.io/Portfolio/2021/05/27/CryptoML.html" />
+<meta name="description" content="This analysis looks at the predictability of 3 major cryptocurrencies: Bitcoin, Ethereum and Litecoin through standard ML algorithms." />
+<meta property="og:description" content="This analysis looks at the predictability of 3 major cryptocurrencies: Bitcoin, Ethereum and Litecoin through standard ML algorithms." />
+<link rel="canonical" href="https://ianldias.github.io/Portfolio/machine_learning/stocks/2021/05/27/CryptoML.html" />
+<meta property="og:url" content="https://ianldias.github.io/Portfolio/machine_learning/stocks/2021/05/27/CryptoML.html" />
 <meta property="og:site_name" content="Ian Dias Portfolio" />
+<meta property="og:image" content="https://ianldias.github.io/Portfolio/images/bitcoin_forecast.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-05-27T00:00:00-05:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Title" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://ianldias.github.io/Portfolio/images/bitcoin_forecast.png" />
+<meta property="twitter:title" content="Random forests, SVMs and Linear Models in the cryptocurrency space" />
 <script type="application/ld+json">
-{"url":"https://ianldias.github.io/Portfolio/2021/05/27/CryptoML.html","@type":"BlogPosting","headline":"Title","dateModified":"2021-05-27T00:00:00-05:00","datePublished":"2021-05-27T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ianldias.github.io/Portfolio/2021/05/27/CryptoML.html"},"description":"Datascience portfolio by Ian Dias","@context":"https://schema.org"}</script>
+{"url":"https://ianldias.github.io/Portfolio/machine_learning/stocks/2021/05/27/CryptoML.html","@type":"BlogPosting","image":"https://ianldias.github.io/Portfolio/images/bitcoin_forecast.png","headline":"Random forests, SVMs and Linear Models in the cryptocurrency space","dateModified":"2021-05-27T00:00:00-05:00","datePublished":"2021-05-27T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ianldias.github.io/Portfolio/machine_learning/stocks/2021/05/27/CryptoML.html"},"description":"This analysis looks at the predictability of 3 major cryptocurrencies: Bitcoin, Ethereum and Litecoin through standard ML algorithms.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://ianldias.github.io/Portfolio/feed.xml" title="Ian Dias Portfolio" /><link rel="shortcut icon" type="image/x-icon" href="/Portfolio/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -89,7 +91,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-05-27T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Random forests, SVMs and Linear Models in the cryptocurrency space</h1><p class="page-description">This analysis looks at the predictability of 3 major cryptocurrencies: Bitcoin, Ethereum and Litecoin through standard ML algorithms.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-05-27T00:00:00-05:00" itemprop="datePublished">
         May 27, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -99,6 +101,16 @@ window.onload = wrap_img;
     
 </span></p>
 
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Portfolio/categories/#machine_learning">machine_learning</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Portfolio/categories/#stocks">stocks</a>
+        
+      
+      </p>
     
 
     
@@ -126,7 +138,14 @@ window.onload = wrap_img;
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <!--
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#Introduction">Introduction </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Data-Sources:">Data Sources: </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Data-preprocessing">Data preprocessing </a></li>
+</ul><!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -135,17 +154,18 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Random-forests,-SVMs-and-Linear-Models-in-the-cryptocurrency-space">Random forests, SVMs and Linear Models in the cryptocurrency space<a class="anchor-link" href="#Random-forests,-SVMs-and-Linear-Models-in-the-cryptocurrency-space"> </a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Introduction">Introduction<a class="anchor-link" href="#Introduction"> </a></h3><p>This analysis looks at the predictability of 3 major cryptocurrencies: Bitcoin, Ethereum and Litecoin through standard ML algorithms.</p>
+<h3 id="Introduction">
+<a class="anchor" href="#Introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction<a class="anchor-link" href="#Introduction"> </a>
+</h3>
+<p>The full notebook is available here: <a href="https://github.com/IanLDias/algo-trading/blob/main/research_papers/ML%20approaches%20to%20crypto.ipynb">https://github.com/IanLDias/algo-trading/blob/main/research_papers/ML%20approaches%20to%20crypto.ipynb</a></p>
 <p>This is part of a broader project available here: <a href="https://github.com/IanLDias/algo-trading">https://github.com/IanLDias/algo-trading</a></p>
-<h4 id="Data-Sources:">Data Sources:<a class="anchor-link" href="#Data-Sources:"> </a></h4><p>Two main data sources were used in this analysis, one to collect data on historical prices and the other to collect relevant IVs.</p>
+<h4 id="Data-Sources:">
+<a class="anchor" href="#Data-Sources:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Sources:<a class="anchor-link" href="#Data-Sources:"> </a>
+</h4>
+<p>Two main data sources were used in this analysis, one to collect data on historical prices and the other to collect relevant IVs.</p>
 <ul>
 <li>Coinmetrics: 10 IV's regarding blockchain data<ul>
 <li>Transaction information (count, size, fees, difficulty)</li>
@@ -166,13 +186,17 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Data-preprocessing">Data preprocessing<a class="anchor-link" href="#Data-preprocessing"> </a></h3>
+<h3 id="Data-preprocessing">
+<a class="anchor" href="#Data-preprocessing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data preprocessing<a class="anchor-link" href="#Data-preprocessing"> </a>
+</h3>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Historical price data is saved on a local postgresql server </li>
@@ -187,7 +211,15 @@ window.onload = wrap_img;
 
 
 
-  </div><a class="u-url" href="/Portfolio/2021/05/27/CryptoML.html" hidden></a>
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="IanLDias/Portfolio"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/Portfolio/machine_learning/stocks/2021/05/27/CryptoML.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
